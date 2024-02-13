@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css">
+		<title>game</title>
+	</head>
+	<body>
+		<div class="game">
+      <div class="container">
+			      <h1 class="text">rock <br> paper <br> scissors <br> </h1>
+            <div class="score">
+              <div class="block1">
+                  <div class="user">user</div>
+                  <div class="count count-player">0</div>
+              </div>
+              <div class="block2">
+                  <div class="user">comp</div>
+                  <div class="count count-computer">0</div>
+              </div>
+            </div>
+      </div>
+          <div class="result">your move</div>
+        <div class="icons">
+          <ul class="icons_player">
+            <li class="button buttonP paper_player" data-field="p"><i class="fa-regular fa-hand"></i></li>
+            <li class="button buttonP rock_player" data-field="r"><i class="fa-regular fa-hand-back-fist"></i></li>
+            <li class="button buttonP  scissors_player" data-field="s"><i class="fa-regular fa-hand-scissors"></i></li>
+          </ul>
+          <ul class="icons_computer">
+            <li class="button buttonC  paper_computer" data-field="p"><i class="fa-regular fa-hand"></i></li>
+            <li class="button buttonC  rock_computer" data-field="r"><i class="fa-regular fa-hand-back-fist"></i></li>
+            <li class="button buttonC  scissors_computer" data-field="s"><i class="fa-regular fa-hand-scissors"></i></li>
+          </ul>
+        </div>
+        <button class="button-restart">
+          restart
+      </button>
+		</div>
+
+
+
+
+
+    <script src="./script.js" ></script>
+    <script src="https://kit.fontawesome.com/6d7cb93199.js"crossorigin="anonymous"></script>
+	</body>
+</html>
+
+
+<!-- data-field="r" -  дата атрібут  дата сет -->

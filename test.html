@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .element { 
+      width: 100px; 
+      height: 50px; 
+      margin: 10px; 
+      background-color: lightgray; 
+      text-align: center; 
+      line-height: 50px; 
+      transition: background-color 0.1s ease;  
+    } 
+    .item {
+      width: 100px; 
+      height: 50px; 
+      margin: 10px; 
+      background-color: lightgray; 
+      text-align: center; 
+      line-height: 50px; 
+      transition: background-color 0.1s ease; 
+    } 
+    .item:hover {
+      background-color: darkgreen;
+      border: 5px solid rgb(217, 177, 75);
+      transform: scale(1.1);
+    }
+
+    .highlight { 
+      background-color: darkgreen;
+      border: 5px solid rgb(217, 177, 75);
+      transform: scale(1.1);
+    }
+  </style>
+</head>
+<body>
+  <div class="element" >Element 1</div> 
+  <div class="element" >Element 2</div> 
+  <div class="element" >Element 3</div> 
+  <div class="item">item</div>
+  <div class="item">item</div>
+  <div class="item">item</div>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() { 
+      const elements = document.querySelectorAll('.element'); 
+      let items = document.querySelectorAll('.item');
+      let currentIndex = 0; 
+      let intervalId; 
+      let blocked = false
+ 
+      items.forEach(item => {
+        item.addEventListener('click', choicePlayer);
+      });
+
+      function choicePlayer(e) {
+        if (blocked) {
+		return
+	}
+ blocked = true;
+        let target = e.target;
+        if (target.classList.contains('item')) {
+          items.forEach(element => element.classList.remove('highlight'));
+          target.classList.add('highlight');
+        }
+      }
+
+      function highlightNextElement() { 
+        elements.forEach(element => { 
+          element.classList.remove('highlight'); 
+        }); 
+ 
+        elements[currentIndex].classList.add('highlight'); 
+ 
+        currentIndex = (currentIndex + 1) % elements.length;
+        setTimeout(() => { 
+          setInterval(() => {
+          elements.forEach(element => { 
+            element.classList.remove('highlight'); 
+          }); 
+ 
+          const randomIndex = Math.floor(Math.random() * elements.length); 
+          elements[randomIndex].classList.add('highlight'); 
+        }, 2500)
+        }, 2500);
+        clearTimeout()
+      } 
+
+      items.forEach(item => {
+        item.addEventListener('click', () => {
+          clearInterval(intervalId);
+          intervalId = setInterval(highlightNextElement, 200);
+        });
+      });
+    });
+  </script>
+</body>
+</html>

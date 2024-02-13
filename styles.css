@@ -1,0 +1,314 @@
+* {
+	padding: 0;
+	margin: 0;
+	border: 0;
+	text-decoration: none;
+}
+
+:focus,
+:active {
+	outline: none;
+}
+a:focus,
+a:active {
+	outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+	display: block;
+}
+
+:root {
+	--boss: rgb(160, 160, 160);
+	--colors: rgb(210, 198, 198);
+}
+
+input,
+button,
+textarea {
+	font-family: inherit;
+}
+
+input::-ms-clear {
+	display: none;
+}
+button {
+	cursor: pointer;
+}
+button::-moz-focus-inner {
+	padding: 0;
+	border: 0;
+}
+a,
+a:visited {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: none;
+}
+ul li {
+	list-style: none;
+}
+img {
+	vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-size: inherit;
+	font-weight: 400;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+body {
+	background-color: #040f49;
+	font-family: system-ui;
+}
+
+.game {
+	margin: 0 auto;
+	width: 1200px;
+	height: 800px;
+	position: relative;
+	top: 100px;
+}
+.text {
+	color: #ffffff;
+	font-size: 50px;
+	margin-left: 20px;
+}
+.container {
+	border: 3px solid #6c6a6a;
+	border-radius: 21px;
+	width: 800px;
+	height: 25vh;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 0 auto;
+	font-family: 'Bebas Neue', sans-serif;
+}
+.score {
+	height: 40px;
+	width: 290px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+}
+.block1 {
+	background-color: #ffffff;
+	border-radius: 20px;
+	width: 500px;
+	height: 120px;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+.block2 {
+	background-color: #ffffff;
+	border-radius: 20px;
+	width: 500px;
+	height: 120px;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	margin-right: 20px;
+}
+.count-player {
+	color: #02305f;
+	font-size: 50px;
+	text-align: center;
+}
+.count-computer {
+	color: #02305f;
+	font-size: 50px;
+	text-align: center;
+}
+.players {
+	display: flex;
+	flex-direction: row;
+}
+.user {
+	color: #02305f;
+	font-size: 30px;
+}
+.computer {
+	color: #02305f;
+	font-size: 30px;
+	position: absolute;
+}
+.icons {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 400px;
+	flex-direction: row;
+	margin: 0 auto;
+}
+.icons_player {
+	display: flex;
+	flex-direction: row;
+	gap: 10px;
+}
+.paper {
+}
+.paper_player {
+	height: 100px;
+	width: 100px;
+	background-color: #ffffff;
+	border-radius: 50%;
+	border: 10px solid #d30000;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+	transition: 0.5s;
+}
+.rock {
+}
+.rock_player {
+	height: 100px;
+	width: 100px;
+	background-color: #ffffff;
+	position: relative;
+	border-radius: 50%;
+	border: 10px solid #0c1cd1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+	transition: 0.5s;
+	display: flex;
+	position: relative;
+	top: 90px;
+}
+.scissors {
+}
+.scissors_player {
+	height: 100px;
+	width: 100px;
+	background-color: #ffffff;
+	position: relative;
+	border-radius: 50%;
+	border: 10px solid #c9de27;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+	transition: 0.5s;
+}
+.icons_computer {
+	display: flex;
+	flex-direction: row;
+	gap: 10px;
+}
+.paper_computer {
+	height: 100px;
+	width: 100px;
+	background-color: #ffffff;
+	border-radius: 50%;
+	border: 10px solid #d30000;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+	transition: 0.5s;
+}
+.rock_computer {
+	height: 100px;
+	width: 100px;
+	background-color: #ffffff;
+	position: relative;
+	border-radius: 50%;
+	border: 10px solid #0c1cd1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+	transition: 0.5s;
+	display: flex;
+	position: relative;
+	top: 90px;
+}
+.scissors_computer {
+	height: 100px;
+	width: 100px;
+	background-color: #ffffff;
+	position: relative;
+	border-radius: 50%;
+	border: 10px solid #c9de27;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+	transition: 0.5s;
+}
+.fa-hand {
+	color: #040f49;
+	font-size: 40px;
+	transition: 0.5s;
+	cursor: pointer;
+	z-index: 0;
+}
+.fa-hand-back-fist {
+	color: #040f49;
+	font-size: 40px;
+	transition: 0.5s;
+	cursor: pointer;
+}
+.fa-hand-scissors {
+	color: #040f49;
+	font-size: 40px;
+	transition: 0.5s;
+	cursor: pointer;
+}
+.result {
+	color: #ffffff;
+	font-size: 40px;
+	margin: 50px;
+	margin-left: 510px;
+}
+.active {
+	background-color: darkgreen;
+	border: 10px solid rgb(217, 177, 75);
+	transform: scale(1.1);
+}
+.loser {
+	background-color: rgb(232, 11, 11);
+	border: 10px solid rgb(217, 177, 75);
+	transform: scale(1.1);
+}
+.draw{
+	background-color: #c9de27;
+	border: 10px solid rgb(217, 177, 75);
+	transform: scale(1.1);
+}
+button {
+	width: 150px;
+	height: 60px;
+	border-radius: 45px;
+	transition: all 0.3s;
+	cursor: pointer;
+	background: white;
+	font-size: 1.2em;
+	font-weight: 550;
+	font-family: 'Montserrat', sans-serif;
+	margin-left: 525px;
+}
+
+button:hover {
+	background: #d13131;
+	color: white;
+	font-size: 1.5em;
+}
+
